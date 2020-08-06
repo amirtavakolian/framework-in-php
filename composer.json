@@ -1,0 +1,16 @@
+{
+    "name": "lord/me",
+    "type": "project",
+    "authors": [{
+        "name": "amir tavakolian",
+        "email": "rezatva@gmail.com"
+    }],
+    "require": {
+        "hekmatinasser/verta": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}
