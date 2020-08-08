@@ -36,12 +36,12 @@ class router
     if ($this->hasMiddleware()) {
       $middle = $this->getMiddlewares();
       foreach ($middle as $midd) {
-        $middle = self::MIDDLEWARE_NAMESPACE . $midd;
-        if(!class_exists($middle)){
+        $middle1 = self::MIDDLEWARE_NAMESPACE . $midd;
+        if(!class_exists($middle1)){
           \app\view\view::load("notFound.classNotfound", ["msg", "Middleware class not founded"]);
           die();
         }
-        $middleware = new $middle();
+        $middleware = new $middle1();
         $middleware->target($this->request);
       }
     }
